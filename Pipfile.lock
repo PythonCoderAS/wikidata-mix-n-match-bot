@@ -179,11 +179,11 @@
         },
         "setuptools": {
             "hashes": [
-                "sha256:4d3c92fac8f1118bb77a22181355e29c239cabfe2b9effdaa665c66b711136d7",
-                "sha256:8ab4f1dbf2b4a65f7eec5ad0c620e84c34111a68d3349833494b9088212214dd"
+                "sha256:a78d01d1e2c175c474884671dde039962c9d74c7223db7369771fcf6e29ceeab",
+                "sha256:bd6eb2d6722568de6d14b87c44a96fac54b2a45ff5e940e639979a3d1792adb6"
             ],
             "markers": "python_version >= '3.10'",
-            "version": "==65.7.0"
+            "version": "==66.0.0"
         },
         "urllib3": {
             "hashes": [
@@ -195,11 +195,11 @@
         },
         "wikidata-bot-framework": {
             "hashes": [
-                "sha256:3f3ef7d15eb12e61e18a3fe9fe63b4343000384d7cf00e0fbcb8115ced04a85a",
-                "sha256:e8b3951790c67847a05fc8dd3ae041608955b4f6d21c713c1a979346c07a6a02"
+                "sha256:1631bcf51f77899f8bfe44e7ea61cd2fec8a05d7801a02986389d3adf89f9cee",
+                "sha256:6df7b9d37ecee7dadbda1fcad3672c59d24f02ff8e25910bb6b9ab96eb3c53f1"
             ],
             "index": "pypi",
-            "version": "==2.1.0"
+            "version": "==3.0.0"
         }
     },
     "develop": {
