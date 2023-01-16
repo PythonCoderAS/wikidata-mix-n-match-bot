@@ -161,6 +161,14 @@
             "markers": "python_version >= '3.6'",
             "version": "==0.6.4"
         },
+        "python-dotenv": {
+            "hashes": [
+                "sha256:1684eb44636dd462b66c3ee016599815514527ad99965de77f43e0944634a7e5",
+                "sha256:b77d08274639e3d34145dfa6c7008e66df0f04b7be7a75fd0d5292c191d79045"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==0.21.0"
+        },
         "pywikibot": {
             "hashes": [
                 "sha256:071b8883c2396c061f210b2369dc1e8cfe2a5dad14fb10a20639df30d729fb5c",
@@ -176,6 +184,13 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==2.28.2"
+        },
+        "sentry-sdk": {
+            "hashes": [
+                "sha256:72da0766c3069a3941eadbdfa0996f83f5a33e55902a19ba399557cfee1dddcc",
+                "sha256:b7ff6318183e551145b5c4766eb65b59ad5b63ff234dffddc5fb50340cad6729"
+            ],
+            "version": "==1.13.0"
         },
         "setuptools": {
             "hashes": [
@@ -195,11 +210,11 @@
         },
         "wikidata-bot-framework": {
             "hashes": [
-                "sha256:4f14a9b0a41e2ee253b351b25ff4ec6bac9ebd7543c816763e36d01a1c4d7381",
-                "sha256:532e8d9e624f86401e926d3dce492dfcd20d4e86c7ebcd5f981cdded98b8dd07"
+                "sha256:7ea43974103b32c2c065cb293c2d6ea71d2c301bc3c1c53989bc8da71ea03a03",
+                "sha256:ad9d2f9ef060f3f4a7815dbafef1bd84bffa0643d19e5bb22de63b4fa7f7165c"
             ],
             "index": "pypi",
-            "version": "==4.1.0"
+            "version": "==4.1.1"
         }
     },
     "develop": {
