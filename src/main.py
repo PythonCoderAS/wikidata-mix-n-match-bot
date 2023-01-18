@@ -24,9 +24,10 @@ class MixNMatchBot(PropertyAdderBot):
     def __init__(self):
         super().__init__()
         self.data = get_sparql_query(mix_n_match_prop)
+        self.edit_group_id = get_random_hex()
 
     def get_edit_group_id(self):
-        return get_random_hex()
+        return self.edit_group_id
 
     def get_edit_summary(self, _):
         return "Updating Mix'n'Match information"
