@@ -210,11 +210,11 @@
         },
         "wikidata-bot-framework": {
             "hashes": [
-                "sha256:4001ddc186cc79e5c945aa24eafe9177b2c5d1d0537398e90d4c9a0082cbe0d7",
-                "sha256:ef1f74d2c80a77ff29c69f1ab810482d87157a863b7c40b55f89af3627c487b7"
+                "sha256:3a6064ec054a8336f51229e014af51e1907e6b7f7b71128273434ebbd9f2c4ad",
+                "sha256:cf24d1617cf51ae8e5c10108ecd9b24a9c7d8daafb37badb44bba50aabbd4bb4"
             ],
             "index": "pypi",
-            "version": "==5.5.2"
+            "version": "==5.6.0"
         }
     },
     "develop": {

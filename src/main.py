@@ -200,4 +200,4 @@ class MixNMatchBot(PropertyAdderBot):
                     del claim.qualifiers[reason_for_preferred]
 
     def run(self):
-        self.feed_items([site.get_entity_for_entity_id(id) for id in self.data.keys()])
+        self.feed_items([site.get_entity_for_entity_id(id) for id in self.data.keys()], skip_errored_items=True)
