@@ -30,7 +30,9 @@ class MixNMatchBot(PropertyAdderBot):
         return self.edit_group_id
 
     def get_edit_summary(self, _):
-        return "Updating information from Mix'n'Match ([[User:RPI2026F1Bot/Task3|info]])"
+        return (
+            "Updating information from Mix'n'Match ([[User:RPI2026F1Bot/Task3|info]])"
+        )
 
     def get_newest_claim(
         self,
@@ -111,16 +113,16 @@ class MixNMatchBot(PropertyAdderBot):
             r = session.get(api_url.format(catalog_id=mix_n_match_id))
             r.raise_for_status()
             data = r.json()
-            count = data["data"][mix_n_match_id]["total"]
+            count = data["data"][mix_n_match_id].get("total", 0)
             active = data["data"][mix_n_match_id]["active"] == "1"
             earliest_match = data["data"][mix_n_match_id]["earliest_match"]
             latest_match = data["data"][mix_n_match_id]["latest_match"]
-            if earliest_match:
+            if earliest_match and earliest_match != "0":
                 start = pywikibot.Timestamp.strptime(earliest_match, "%Y%m%d%H%M%S")
                 start_time = pywikibot.WbTime(
                     year=start.year, month=start.month, day=start.day
                 )
-            if latest_match:
+            if latest_match and latest_match != "0":
                 end = pywikibot.Timestamp.strptime(latest_match, "%Y%m%d%H%M%S")
                 end_time = pywikibot.WbTime(year=end.year, month=end.month, day=end.day)
             now = self.now()
@@ -154,7 +156,7 @@ class MixNMatchBot(PropertyAdderBot):
                     ExtraQualifier(qual_3, replace_if_conflicting_exists=True)
                 )
             oh.add_property(extra_property)
-            if multiple:
+            if multiple or not count:
                 continue
             claim = pywikibot.Claim(site, num_records)
             claim.setTarget(pywikibot.WbQuantity(count, site=site))
@@ -175,6 +177,7 @@ class MixNMatchBot(PropertyAdderBot):
             if (
                 (
                     most_recent_claim
+                    and most_recent_claim.getTarget()
                     and most_recent_claim.getTarget().amount < int(count)
                 )
                 or not most_recent_claim
@@ -190,9 +193,12 @@ class MixNMatchBot(PropertyAdderBot):
         for claim in item.claims.get(num_records, []):
             claim: pywikibot.Claim
             if qualifiers := claim.qualifiers.get(point_in_time, []):
-                if self.now().toTimestamp() - qualifiers[
-                    0
-                ].getTarget().toTimestamp() < datetime.timedelta(days=1):
+                first_value = qualifiers[0].getTarget()
+                if (
+                    first_value
+                    and self.now().toTimestamp() - first_value.toTimestamp()
+                    < datetime.timedelta(days=1)
+                ):
                     continue
             if claim.rank == "preferred":
                 claim.setRank("normal")
@@ -200,4 +206,7 @@ class MixNMatchBot(PropertyAdderBot):
                     del claim.qualifiers[reason_for_preferred]
 
     def run(self):
-        self.feed_items([site.get_entity_for_entity_id(id) for id in self.data.keys()], skip_errored_items=True)
+        self.feed_items(
+            [site.get_entity_for_entity_id(id) for id in self.data.keys()],
+            skip_errored_items=True,
+        )
