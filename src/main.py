@@ -138,14 +138,14 @@ class MixNMatchBot(PropertyAdderBot):
             ):
                 pass
             else:
-                if earliest_match:
+                if earliest_match and earliest_match != "0":
                     qual_1 = pywikibot.Claim(site, latest_start_time_prop)
                     qual_1.setTarget(start_time)
                     extra_property.add_qualifier(
                         ExtraQualifier(qual_1, replace_if_conflicting_exists=True)
                     )
             if not active:
-                if latest_match:
+                if latest_match and latest_match != "0":
                     qual_2 = pywikibot.Claim(site, latest_date)
                     qual_2.setTarget(end_time)
                     extra_property.add_qualifier(
