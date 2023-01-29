@@ -117,6 +117,8 @@ class MixNMatchBot(PropertyAdderBot):
             active = data["data"][mix_n_match_id]["active"] == "1"
             earliest_match = data["data"][mix_n_match_id]["earliest_match"]
             latest_match = data["data"][mix_n_match_id]["latest_match"]
+            autoscraped = data["data"][mix_n_match_id].get("has_autoscrape", 0)
+            name = data["data"][mix_n_match_id].get("name", "")
             if earliest_match and earliest_match != "0":
                 start = pywikibot.Timestamp.strptime(earliest_match, "%Y%m%d%H%M%S")
                 start_time = pywikibot.WbTime(
@@ -155,6 +157,14 @@ class MixNMatchBot(PropertyAdderBot):
                 extra_property.add_qualifier(
                     ExtraQualifier(qual_3, replace_if_conflicting_exists=True)
                 )
+            if autoscraped:
+                qual_4 = pywikibot.Claim(site, has_quality)
+                qual_4.setTarget(pywikibot.ItemPage(site, autoscraped_catalog))
+                extra_property.add_qualifier(ExtraQualifier(qual_4))
+            if name:
+                qual_5 = pywikibot.Claim(site, named_as)
+                qual_5.setTarget(name)
+                extra_property.add_qualifier(ExtraQualifier(qual_5))
             oh.add_property(extra_property)
             if multiple or not count:
                 continue
@@ -206,6 +216,8 @@ class MixNMatchBot(PropertyAdderBot):
                     del claim.qualifiers[reason_for_preferred]
 
     def run(self):
+        self.feed_items([site.get_entity_for_entity_id("P4563")])
+        return
         self.feed_items(
             [site.get_entity_for_entity_id(id) for id in self.data.keys()],
             skip_errored_items=True,
