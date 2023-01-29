@@ -30,7 +30,7 @@ class MixNMatchBot(PropertyAdderBot):
         return self.edit_group_id
 
     def get_edit_summary(self, _):
-        return "Updating Mix'n'Match information"
+        return "Updating information from Mix'n'Match ([[User:RPI2026F1Bot/Task3|info]])"
 
     def get_newest_claim(
         self,
