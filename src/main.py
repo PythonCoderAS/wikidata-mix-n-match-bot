@@ -166,7 +166,7 @@ class MixNMatchBot(PropertyAdderBot):
                 qual_5.setTarget(name.strip())
                 extra_property.add_qualifier(ExtraQualifier(qual_5))
             oh.add_property(extra_property)
-            if multiple or not count:
+            if True: # multiple or not count: # commented out due to doubts about source
                 continue
             claim = pywikibot.Claim(site, num_records)
             claim.setTarget(pywikibot.WbQuantity(count, site=site))
