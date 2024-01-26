@@ -162,19 +162,19 @@
         },
         "python-dotenv": {
             "hashes": [
-                "sha256:a8df96034aae6d2d50a4ebe8216326c61c3eb64836776504fcca410e5937a3ba",
-                "sha256:f5971a9226b701070a4bf2c38c89e5a3f0d64de8debda981d1db98583009122a"
+                "sha256:e324ee90a023d808f1959c46bcbc04446a10ced277783dc6ee09987c37ec10ca",
+                "sha256:f7b63ef50f1b690dddf550d03497b66d609393b40b564ed0d674909a68ebf16a"
             ],
             "markers": "python_version >= '3.8'",
-            "version": "==1.0.0"
+            "version": "==1.0.1"
         },
         "pywikibot": {
             "hashes": [
-                "sha256:380454e6b6e53a74f4925d1afaed9b485325fa62f8d475eb3931a5b83a1e0015",
-                "sha256:5c273a0affbaaeb8608e69544739447146b7a95ed19a4f2425d8a5f3f8578694"
+                "sha256:193a1b56e6ffc44f981b9a87ccfe022b7084e8d0f626635990bd9dc712c07033",
+                "sha256:d6d0cd748ee5534ffecf8ebdd831949b795935cf31127f313b1a115e44de87f2"
             ],
             "markers": "python_full_version >= '3.6.1'",
-            "version": "==8.6.0"
+            "version": "==8.2.0"
         },
         "requests": {
             "hashes": [
@@ -217,12 +217,12 @@
         },
         "wikidata-bot-framework": {
             "hashes": [
-                "sha256:3ddc22b57cc2d7fe78651d42d8587a622aaa5b6e412a0f0b98b2341eacf8d7ca",
-                "sha256:b24b0547ad16650b781d51d7db830de417038a9c92a54c51d1c5b79090167bd5"
+                "sha256:e031e13e89deea18e84b751d5646a76a24d25a17ab8eb9f5965d6032b2524a11",
+                "sha256:f5b5e20f80e48e9b51ebfa9251e6e8d60163626b791dc84cc4e346460ea1c489"
             ],
             "index": "pypi",
             "markers": "python_version >= '3.9'",
-            "version": "==7.2.0"
+            "version": "==7.2.1"
         }
     },
     "develop": {
