@@ -196,11 +196,11 @@
         },
         "setuptools": {
             "hashes": [
-                "sha256:4be25497f46470c1e57c79073368e51d5506bdcb34f88935ead7556e17fff36d",
-                "sha256:5cc49d9e66c286c5f5fd8051852cca8cc8ccc354647247fd1c6f97c832c1d903"
+                "sha256:199466a166ff664970d0ee145839f5582cb9bca7a0a3a2e795b6a9cb2308e9c6",
+                "sha256:43b4ee60e10b0d0ee98ad11918e114c70701bc6051662a9a675a0496c1a158f4"
             ],
             "markers": "python_version >= '3.9'",
-            "version": "==75.9.0"
+            "version": "==76.0.0"
         },
         "typing-extensions": {
             "hashes": [
