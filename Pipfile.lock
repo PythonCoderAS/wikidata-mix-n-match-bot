@@ -283,11 +283,11 @@
         },
         "sentry-sdk": {
             "hashes": [
-                "sha256:6a97895230b04bc35d4d8d2e51e3b9e21902dfb0086ccf1f131a80c15c7b997a",
-                "sha256:775b78871783a0ffd758276ad01b3bb2b1ebcdad8f9d2f0a7723f76b73c99b65"
+                "sha256:2d2556d9a14db548982b914cbed2a2dc07b6e55d941a620752f89a2afccfd78d",
+                "sha256:f9284b417540b0784b994fa021eb6f1e30ae1cce593d83541274d03c93966eff"
             ],
             "markers": "python_version >= '3.6'",
-            "version": "==2.68.1"
+            "version": "==2.69.1"
         },
         "setuptools": {
             "hashes": [
@@ -436,11 +436,11 @@
         },
         "platformdirs": {
             "hashes": [
-                "sha256:4f41487eeeeeb07f3a6625e61d9bc0ae6809f92d3386dbd74392fbb76108104d",
-                "sha256:8a02cb259042c79d1cd0450facc2fe6dc9d303ae7901afbe33bf8ea0b188cef6"
+                "sha256:52f2f181bbfde907966932cc8312d967d02976422d66d537ea16092b8e291081",
+                "sha256:f23abafea7dd4276d1f29104b83598d7dcc567cafd07c9c951e66665645437fc"
             ],
             "markers": "python_version >= '3.10'",
-            "version": "==4.11.7"
+            "version": "==4.11.8"
         },
         "pytokens": {
             "hashes": [
